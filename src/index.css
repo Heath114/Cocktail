@@ -79,7 +79,7 @@ body {
     }
 
     .noisy {
-        @apply absolute inset-0 h-full w-full bg-[url("/images/noise.png")];
+        @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
     }
 
     #hero {
@@ -206,7 +206,8 @@ body {
             @apply relative mb-8 text-nowrap text-center font-modern-negra text-8xl leading-none text-[#505050] md:text-[20vw];
         }
         .content {
-            @apply mt-40 flex flex-col justify-between gap-10 md:mt-0 md:flex-row md:mb-16;
+            @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
+
         }
         .cocktail-img {
             @apply absolute top-0 left-1/2 h-[50vh] w-full -translate-x-1/2 overflow-hidden rounded-4xl md:top-1/2 md:h-[70vh] md:w-[60vw] md:-translate-y-1/2;

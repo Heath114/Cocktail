@@ -7,8 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 
 export default function Hero() {
     const videoRef = React.useRef(null)
-    const videoTimelineRef = React.useRef(null)
-    const videoContainerRef = React.useRef(null) // Add this ref
 
 
     const isMobile = useMediaQuery({ maxWidth: 767 }) //checks if the screen is mobile
@@ -19,7 +17,6 @@ export default function Hero() {
         const paragraphSplit = new SplitText('.subtitle', { type: 'lines'}) // split into one giant block of text
 
         heroSplit.chars.forEach((char) => char.classList.add('text-gradient')) // add a class of text-gradient to each character
-        paragraphSplit.lines.forEach((line) => line.classList.add('text-gradient')) // add a class of text-gradient to each line
 
 
         gsap.from(heroSplit.chars, {
@@ -52,7 +49,7 @@ export default function Hero() {
         .to('.left-leaf', {y: 200}, 0)
         
         const startValue = isMobile ? 'top 50%' : 'center 60%' // If on mobile, animation starts when the top of the element hits the center of the viewport, else it starts when the center of the element hits 60% of the viewport height
-        const endValue = isMobile ? 'bottom center' : 'bottom top' // If on mobile, end animation when the bottom of the element hits the center of the viewport, else it ends when the bottom hits the top of the viewport
+        const endValue = isMobile ? '120% top' : 'bottom top' // If on mobile, end animation when the bottom of the element hits the center of the viewport, else it ends when the bottom hits the top of the viewport
         
 
         //Create video timeline
@@ -91,7 +88,7 @@ export default function Hero() {
                             <p className="subtitle">Sip the Spirit <br /> of Summer</p>
                         </div>
                         <div className="view-cocktails">
-                            <p className="subtitle">
+                            <p className="subtitle pb-3">
                                 Every cocktail on our menu is a blend of premium ingredients, creative flair, and timeless recipes. Designed to delight your senses. 
                             </p>
                             <a href="#cocktails">View Cocktails</a>
