@@ -51,8 +51,8 @@ export default function Hero() {
         .to('.right-leaf', {y: 200}, 0)
         .to('.left-leaf', {y: 200}, 0)
         
-        const startValue = isMobile ? 'top top' : 'center center' // If on mobile, animation starts once the viewport is at 50% from the top, else it starts at 60% from the center
-        const endValue = isMobile ? 'bottom center' : 'bottom top' // If on mobile, animation ends once the viewport is at 120% from the top, else it ends at the bottom of the top
+        const startValue = isMobile ? 'top 50%' : 'center 60%' // If on mobile, animation starts when the top of the element hits the center of the viewport, else it starts when the center of the element hits 60% of the viewport height
+        const endValue = isMobile ? 'bottom center' : 'bottom top' // If on mobile, end animation when the bottom of the element hits the center of the viewport, else it ends when the bottom hits the top of the viewport
         
 
         //Create video timeline
@@ -106,7 +106,7 @@ export default function Hero() {
                 muted
                 playsInline
                 preload="auto"
-                ref={videoRef}               
+                ref={videoRef}
                 />
                     
                 
