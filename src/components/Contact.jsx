@@ -36,12 +36,12 @@ const Contact = () => {
 
                 <div>
                     <h3>Visit Our Lounge</h3>
-                    <p>Al-Abdali Boulevard, Building 456, 4th Floor, Amman, Jordan</p>
+                    <p>456 Raw Boulevard, Floor 4, Los Angeles Arts District, CA 90210</p>
                 </div>
 
                 <div>
                     <h3>Contact Us</h3>
-                    <p>+962 6 555 5555</p>
+                    <p>(555) 987-987-6513</p>
                     <p>hello@jsmcocktail.com</p>
                 </div>
 
