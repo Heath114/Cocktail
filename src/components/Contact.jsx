@@ -22,7 +22,7 @@ const Contact = () => {
             .from(titleSplit.words, {opacity: 0, yPercent: 100, stagger: 0.02})
             .from('#contact h3, #contact p', { opacity: 0, yPercent: 100, stagger: 0.02})
             .to('#f-right-leaf', { y: '-50', duration: 1, ease: 'power1.inOut'})
-            .to('#f-left-leaf', { y: '-50', duration: 1, ease: 'power1.inOut'})
+            .to('#f-left-leaf', { y: '-50', duration: 1, ease: 'power1.inOut'}, '<') 
             
     })
 
@@ -36,12 +36,12 @@ const Contact = () => {
 
                 <div>
                     <h3>Visit Our Lounge</h3>
-                    <p> 456, Raw Blvd. #404, Los Angeles, CA 90210</p>
+                    <p>Al-Abdali Boulevard, Building 456, 4th Floor, Amman, Jordan</p>
                 </div>
 
                 <div>
                     <h3>Contact Us</h3>
-                    <p>(555) 987-987-6513</p>
+                    <p>+962 6 555 5555</p>
                     <p>hello@jsmcocktail.com</p>
                 </div>
 

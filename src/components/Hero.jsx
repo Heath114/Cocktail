@@ -42,14 +42,13 @@ export default function Hero() {
                 start: 'top top',
                 end: 'bottom top',
                 scrub: true, // Smooth scrubbing
-
             }
         })
         .to('.right-leaf', {y: 200}, 0)
         .to('.left-leaf', {y: 200}, 0)
         
         const startValue = isMobile ? 'top 50%' : 'center 60%' // If on mobile, animation starts when the top of the element hits the center of the viewport, else it starts when the center of the element hits 60% of the viewport height
-        const endValue = isMobile ? '120% top' : 'bottom top' // If on mobile, end animation when the bottom of the element hits the center of the viewport, else it ends when the bottom hits the top of the viewport
+        const endValue = isMobile ? '164% top' : 'bottom top' // If on mobile, end animation when the bottom of the element hits the center of the viewport, else it ends when the bottom hits the top of the viewport
         
 
         //Create video timeline
