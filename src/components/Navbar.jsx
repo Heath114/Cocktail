@@ -1,5 +1,5 @@
 import React from 'react'
-import { navLinks } from 'C:/Users/Jabb4maN/Desktop/real react-20250607T230603Z-1-001/Mohito/Mohito/constants/index.js'
+import { navLinks } from '../../constants/index.js'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
