@@ -114,7 +114,9 @@ const Menu = () => {
                     <div ref={contentRef} className="info">
                         <p 
                             id="title"
-                            dangerouslySetInnerHTML={{__html: breakTitle(currentCocktail.name)}}>
+                            dangerouslySetInnerHTML={{__html: breakTitle(currentCocktail.name)}}
+                            className="md:mb-20"
+                            >
                         </p>
                     </div>
                 
@@ -132,3 +134,5 @@ const Menu = () => {
 }
 
 export default Menu;
+
+
