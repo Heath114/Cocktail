@@ -141,15 +141,15 @@ const allCocktails = [
 	image: "/images/drink1.png",
 	title: "Simple Ingredients, Bold Flavor",
 	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+	 "Tequila, lime juice, and orange liqueur make the Margarita simple yet full of character. A salted rim completes the perfect summer-night drink.",
  },
  {
 	id: 2,
 	name: "Raspberry Mojito",
-	image: "/images/drink2.png",
+	image: "/images/drink7.png",
 	title: "A Zesty Classic That Never Fails",
 	description:
-	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness.",
  },
  {
 	id: 3,
@@ -157,7 +157,16 @@ const allCocktails = [
 	image: "/images/drink3.png",
 	title: "Simple Ingredients, Bold Flavor",
 	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+	"Tequila, lime juice, and orange liqueur create a bold, simple Margarita, complete with a salted rim for perfect summer nights.",
+
+
+
+
+
+
+
+
+
  },
  {
 	id: 4,

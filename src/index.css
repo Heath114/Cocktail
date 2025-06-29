@@ -214,10 +214,10 @@ body {
         }
         .masked-container {
             h2 {
-                @apply mt-32 mb-10 text-center font-modern-negra text-4xl text-white md:text-5xl;
+                @apply mt-32 mb-20 text-center font-modern-negra text-4xl text-white md:text-5xl;
             }
             div {
-                @apply absolute bottom-52 left-1/2 -translate-x-1/2 space-y-5 opacity-0 md:bottom-5 md:px-0 px-5;
+                @apply absolute bottom-64 left-1/2 -translate-x-1/2 space-y-5 opacity-0 md:bottom-5 md:px-0 px-5;
                 h3 {
                     @apply w-80 text-center font-serif text-2xl text-white md:w-full md:text-5xl;
                 }

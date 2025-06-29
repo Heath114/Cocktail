@@ -20,7 +20,7 @@ const About = () => {
         .from(titleSplit.words, {
             opacity: 0,
             duration: 1,
-            ypercent: 100,
+            yPercent: 100,
             ease: 'expo.out',
             stagger: 0.02,
         })

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -6,7 +7,7 @@ import { allCocktails} from '../../constants/index.js';
 import { ScrollTrigger} from 'gsap/all'
 
 const Menu = () => {
-
+    const isMobile = useMediaQuery({ maxWidth: 767 })
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const contentRef = React.useRef(null)
 
@@ -47,6 +48,24 @@ const Menu = () => {
     const nextCocktail = getCocktailAt(1);
 
 
+    function breakTitle(title){
+        if(isMobile){
+            const words = title.split(' ')
+            if(words.length >= 2){
+                const midPoint = Math.ceil(words.length / 2)
+                const firstLine = words.slice(0, midPoint).join(' ')
+                const secondLine = words.slice(midPoint).join(' ')
+                return `${firstLine}<br>${secondLine}`
+            }
+        }
+        return title
+    }
+    console.log('--- Debugging Menu Component ---');
+    console.log('isMobile:', isMobile);
+    console.log('Current window width:', window.innerWidth);
+    console.log('Current Cocktail Title:', currentCocktail.title);
+    console.log('Break Title output for current cocktail:', breakTitle(currentCocktail.title));
+    console.log('------------------------------');
     return(
         <section id="menu" aria-labelledby="menu-heading">
             <img src="/images/slider-left-leaf.png" alt="left leaf" id="m-left-leaf" />
@@ -87,18 +106,23 @@ const Menu = () => {
                     </button>
                 </div>
 
-                <div className="cocktail">
+                <div className={ isMobile ? "cocktail w-full h-56 mb-10" : "cocktail" }>
                     <img src={currentCocktail.image} className="object-contain" alt={currentCocktail.name} />
                 </div>
 
-                <div className="recipe">
+                <div className={ isMobile ? "recipe md:flex-row md:justify-between md:text-left md:mt-8" : "recipe"  }>
                     <div ref={contentRef} className="info">
-                        <p id="title">{currentCocktail.name}</p>
+                        <p 
+                            id="title"
+                            dangerouslySetInnerHTML={{__html: breakTitle(currentCocktail.name)}}>
+                        </p>
                     </div>
                 
 
-                    <div className="details">
-                        <h2>{currentCocktail.title}</h2>
+                    <div className={isMobile ? "details max-w-sm" : "details"}>
+                        <h2 
+                            className={isMobile ? "max-w-sm" : ""}>
+                        </h2>
                         <p>{currentCocktail.description}</p>
                     </div>
                 </div>
